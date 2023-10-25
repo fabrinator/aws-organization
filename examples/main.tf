@@ -7,6 +7,12 @@ module "organization" {
     units = [
       {
         name = "crc",
+#        accounts = [
+#          {
+#            name  = "iac"
+#            email = "fabri1492+aws+org+iac@hotmail.com"
+#          }
+#        ]
         units = [
           {
             name = "Development",
@@ -14,10 +20,6 @@ module "organization" {
               {
                 name  = "crc"
                 email = "fabri1492+aws+org+crc+dev@hotmail.com"
-              },
-              {
-                name  = "iac"
-                email = "fabri1492+aws+org+iac@hotmail.com"
               }
             ]
           },
