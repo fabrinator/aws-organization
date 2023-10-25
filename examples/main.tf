@@ -4,12 +4,6 @@ module "organization" {
   feature_set = "ALL"
 
   organization = {
-    accounts = [
-      {
-        name  = "iac"
-        email = "fabri1492+aws+org+iac@hotmail.com"
-      }
-    ]
     units = [
       {
         name = "crc",
@@ -20,6 +14,10 @@ module "organization" {
               {
                 name  = "crc"
                 email = "fabri1492+aws+org+crc+dev@hotmail.com"
+              },
+              {
+                name  = "iac"
+                email = "fabri1492+aws+org+iac@hotmail.com"
               }
             ]
           },
