@@ -9,7 +9,7 @@ module "organization" {
         name = "crc",
 #        accounts = [
 #          {
-#            name  = "iac"
+#            name  = "crc-iac"
 #            email = "fabri1492+aws+org+iac@hotmail.com"
 #          }
 #        ]
@@ -18,8 +18,8 @@ module "organization" {
             name = "Development",
             accounts = [
               {
-                name  = "crc"
-                email = "fabri1492+aws+org+crc+dev@hotmail.com"
+                name  = "crc-dev"
+                email = "fabri1492+aws+org+crc+dev2@hotmail.com"
               }
             ]
           },
@@ -27,8 +27,8 @@ module "organization" {
             name = "Production",
             accounts = [
               {
-                name  = "crc"
-                email = "fabri1492+aws+org+crc+prod@hotmail.com"
+                name  = "crc-prod"
+                email = "fabri1492+aws+org+crc+prod2@hotmail.com"
               }
             ]
           }

@@ -1,14 +1,17 @@
 resource "aws_organizations_account" "root" {
   for_each  = local.accounts_root
-  name      = "${each.value.parent}-${each.value.name}"
+  name      = each.value.name
   email     = each.value.email
   parent_id = aws_organizations_organization.this.roots[0].id
   close_on_deletion = true
+  lifecycle {
+    create_before_destroy = false
+  }
 }
 
 resource "aws_organizations_account" "first_level" {
   for_each  = local.accounts_first_level
-  name      = "${each.value.parent}-${each.value.name}"
+  name      = each.value.name
   email     = each.value.email
   parent_id = aws_organizations_organizational_unit.first_ou[each.value.parent].id
   close_on_deletion = true
@@ -16,7 +19,7 @@ resource "aws_organizations_account" "first_level" {
 
 resource "aws_organizations_account" "second_level" {
   for_each  = local.accounts_second_level
-  name      = "${each.value.parent}-${each.value.name}"
+  name      = each.value.name
   email     = each.value.email
   parent_id = aws_organizations_organizational_unit.second_ou[each.value.parent].id
   close_on_deletion = true
