@@ -19,7 +19,7 @@ module "organization" {
             accounts = [
               {
                 name = "bootcamp-account"
-                email = fabri1492+aws+bootcamp@hotmail.com
+                email = "fabri1492+aws+bootcamp@hotmail.com"
               }
             ]
           },
