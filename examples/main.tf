@@ -15,6 +15,15 @@ module "organization" {
 #        ]
         units = [
           {
+            name = "bootcamp",
+            accounts = [
+              {
+                name = "bootcamp-account"
+                email = fabri1492+aws+bootcamp@hotmail.com
+              }
+            ]
+          },
+          {
             name = "Development",
             accounts = [
               {
