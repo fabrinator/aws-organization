@@ -1,6 +1,6 @@
 module "organization" {
   source = "../"
-
+  aws_service_access_principals = ["sso.amazonaws.com"]
   feature_set = "ALL"
 
   organization = {
