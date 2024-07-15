@@ -5,13 +5,8 @@ module "organization" {
 
   organization = {
     units = [
-      {name = "infrastructure",
-        accounts = [
-        {
-          name = "shared"
-          email = "fabri1492+aws+infra+shared@hotmail.com"
-        }
-        ]
+      {
+        name = "infrastructure"
       },
       {
         name = "crc"
