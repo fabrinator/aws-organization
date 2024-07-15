@@ -1,24 +1,32 @@
 module "organization" {
-  source = "../"
+  source                        = "../"
   aws_service_access_principals = ["sso.amazonaws.com"]
-  feature_set = "ALL"
+  feature_set                   = "ALL"
 
   organization = {
     units = [
       {
-        name = "crc",
-#        accounts = [
-#          {
-#            name  = "crc-iac"
-#            email = "fabri1492+aws+org+iac@hotmail.com"
-#          }
-#        ]
+        name = "infrastructure"
+        units = [
+          {
+            name = "shared",
+            accounts = [
+              {
+                name  = "infra-shared"
+                email = "fabri1492+aws+shared@hotmail.com"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name = "crc"
         units = [
           {
             name = "bootcamp",
             accounts = [
               {
-                name = "bootcamp-account"
+                name  = "bootcamp-account"
                 email = "fabri1492+aws+bootcamp@hotmail.com"
               }
             ]
@@ -46,4 +54,4 @@ module "organization" {
     ]
   }
 }
- 
+
