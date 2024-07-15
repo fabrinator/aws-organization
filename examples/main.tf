@@ -5,14 +5,16 @@ module "organization" {
 
   organization = {
     units = [
+      {name = "infrastructure",
+        accounts = [
+        {
+          name = "shared"
+          email = "fabri1492+aws+infra+shared@hotmail.com"
+        }
+        ]
+      },
       {
-        name = "crc",
-#        accounts = [
-#          {
-#            name  = "crc-iac"
-#            email = "fabri1492+aws+org+iac@hotmail.com"
-#          }
-#        ]
+        name = "crc"
         units = [
           {
             name = "bootcamp",
